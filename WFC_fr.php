@@ -72,11 +72,11 @@ foreach ($textAr as $line) {
     $line = preg_replace('#([^;]+);([0-9]+)#', '$1 $2', $line);
     $arc = explode(" ", $line);
     if($i==0){
-       $w1.=$arc[0];
        $f1.=$arc[1];
+       $w1.=$arc[0];
     }else{
-       $w1.='","'.$arc[0];
        $f1.=','.$arc[1];
+       $w1.='","'.$arc[0];
     }
     $i++;
 } 
@@ -92,13 +92,13 @@ treat("words2","w2","f2");
 if(isset($_POST["title1"])){
    echo "var title1=\"".$_POST["title1"]."\";";
 } else {
-   echo "var title1=\"List 1\";";
+   echo "var title1=\"Liste 1\";";
 }
 
 if(isset($_POST["title2"])){
    echo "var title2=\"".$_POST["title2"]."\";";
 } else {
-   echo "var title2=\"List 2\";";
+   echo "var title2=\"Liste 2\";";
 }
 
 if(isset($_POST["frequencies"])){
@@ -180,7 +180,6 @@ if(isset($_POST["frequencies"])){
       //console.log("h"+(h2));
       py2.push(y2);
    }
-
    
    // Compute the smallest and highest differences of position in 1st and 2nd list
    var minHeight=0;
@@ -236,20 +235,16 @@ if(isset($_POST["frequencies"])){
 
 <body style="font-family:Calibri,sans-serif;margin:20px;">
 
-<a href="index_fr.php"><img src="LangFrench.jpg" alt="En français..." title="En français..." style="float:right;margin-left:10px;"></a>
+<a href="index.php"><img src="LangEnglish.jpg" alt="In English..." title="In English..." style="float:right;margin-left:10px;"></a>
 <h1>Word Frequency Chains</h1>
 <p>
-   The visualization below displays the 2 lists of words you have given as input.
-   The <b>sizes of the words</b> depend on their number of occurrences according to the 2 input lists.
-   If the same word appears on the left and on the right side, a <b>link</b> is drawn between the two occurrences:
-   the link is <b>blue</b> if the word is ranked better in the second list than in the first list, <b>red</b> if
-   ranked better in the first one, <b>gray</b> if it has the same rank in both lists.
+   La visualisation ci-dessous montre les 2 listes de mots fournies.
+   Les <b>tailles des mots</b> dépendent de leur nombre d'occurrence dans les 2 listes fournies.
+   Si le même mot apparaît du côté gauche et du côté droit, un <b>lien</b> est dessiné entre les deux occurrences :
+   le lien est <b>bleu</b> si le mot est mieux classé dans la seconde liste, <b>rouge</b> s'il est mieux classé dans la première, <b>gris</b> s'il a le même classement dans les deux listes.
 </p>
 <p>
-   This visualization helps to detect "<i><b>word frequency chains</b></i>", that is <b>sets of words which are
-   ranked in a reverse order in the first and in the second list</b>. To find such lists, find <b>a blue link
-   intersecting a red link</b>, and identify the links intersecting them whose left endpoints and right endpoints
-   are sorted in symmetric orderings.
+   Cette visualisation aide à détecter les "<i><b>word frequency chains</b></i>", c'est-à-dire des <b>ensembles de mots qui sont classés dans un ordre inversé dans la première et la seconde liste</b>. Pour trouver de tels ensembles, il faut trouver <b>un lien bleu qui intersecte un lien rouge</b>, et identifier les autres liens qui les intersectent, dont les extrémités grauche et droite sont apparaissent selon un ordre inversé.
 </p>
 
 <span style="width: auto; font-size: 9pt;" id="label"></span>
@@ -258,9 +253,9 @@ if(isset($_POST["frequencies"])){
 </svg>
 </div>
 
-<h2>About</h2>
+<h2>&Agrave; propos</h2>
 <p>
-   WFC - Word Frequency Chains, a visual tool to compare the frequency of words in two texts<br/>
+   WFC - Word Frequency Chains, un outil visuel pour comparer les fréquences de mots dans deux textes<br/>
    Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">Nadège Lechevrel</a>
    &amp; <a href="http://igm.univ-mlv.fr/~gambette/">Philippe Gambette</a>.
 </p>
@@ -277,5 +272,5 @@ if(isset($_POST["frequencies"])){
    <a href="http://www.gnu.org/licenses/">GNU General Public License</a> for more details.
 </p>
 
-<!--SoO/ei5l blg-->
+<!--blgSoO/ei5lt-->
 </body></html>

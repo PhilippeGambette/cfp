@@ -18,7 +18,7 @@ You can build such lists using the <a href="http://www.treecloud.org">Treecloud.
 <br/>
 <div style="float:left;width:auto;margin:20px;padding:20px;background-color:#AAEEAA">
 Name of the first list:<br/>
-<input type="text" name="title1"></input><br/><br/>
+<input type="text" name="title1" value="Years 2004-2007"></input><br/><br/>
 Most frequent words of the 1st text:<br/>
 <textarea name="words1" col=10 rows=10>
 species;3499
@@ -60,7 +60,7 @@ role;474
 </div>
 <div style="float:left;width:auto;margin:20px;padding:20px;background-color:#EEAAAA">
 Name of the second list:<br/>
-<input type="text" name="title2"></input><br/><br/>>
+<input type="text" name="title2" value="Years 2008-2011"><br/><br/>>
 Most frequent words of the 2nd text:<br/>
 <textarea name="words2" col=10 rows=10>
 species;4025
@@ -103,7 +103,7 @@ large;662
 <br>
 <input type="submit" value="Submit">
 <br/>
-<INPUT type="checkbox" name="frequencies" value="Display frequencies">Display frequencies
+<INPUT type="checkbox" name="frequencies" value="Display frequencies" checked>Display frequencies
 </form>
 
 <br/>
