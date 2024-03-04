@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
    <HEAD>
-      <TITLE>Word Frequency Chains</TITLE>
+      <TITLE>CFP - Chains of Frequency Permutations</TITLE>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/united/bootstrap.min.css">
       <link rel="icon" href="WFC.ico" />
    </HEAD>
@@ -11,9 +11,9 @@
 
 <script type="text/javascript">
 /*
-    ******************** WFC - Word Frequency Chains ********************
+    ******************** CFP - Chains of Frequency Permutations ********************
     -> a Javascript code to compare the frequency of words in two texts
-    Copyright (C) 2015 - Philippe Gambette, Nadège Lechevrel
+    Copyright (C) 2015 - Philippe Gambette, NadÃ¨ge Lechevrel
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -72,11 +72,11 @@ foreach ($textAr as $line) {
     $line = preg_replace('#([^;]+);([0-9]+)#', '$1 $2', $line);
     $arc = explode(" ", $line);
     if($i==0){
-       $w1.=$arc[0];
        $f1.=$arc[1];
+       $w1.=$arc[0];
     }else{
-       $w1.='","'.$arc[0];
        $f1.=','.$arc[1];
+       $w1.='","'.$arc[0];
     }
     $i++;
 } 
@@ -180,7 +180,6 @@ if(isset($_POST["frequencies"])){
       //console.log("h"+(h2));
       py2.push(y2);
    }
-
    
    // Compute the smallest and highest differences of position in 1st and 2nd list
    var minHeight=0;
@@ -236,8 +235,8 @@ if(isset($_POST["frequencies"])){
 
 <body style="font-family:Calibri,sans-serif;margin:20px;">
 
-<a href="index_fr.php"><img src="LangFrench.jpg" alt="En français..." title="En français..." style="float:right;margin-left:10px;"></a>
-<h1>Word Frequency Chains</h1>
+<a href="index.php"><img src="LangEnglish.jpg" alt="In English..." title="In English..." style="float:right;margin-left:10px;"></a>
+<h1>CFP - Chains of Frequency Permutations</h1>
 <p>
    The visualization below displays the 2 lists of words you have given as input.
    The <b>sizes of the words</b> depend on their number of occurrences according to the 2 input lists.
@@ -246,10 +245,16 @@ if(isset($_POST["frequencies"])){
    ranked better in the first one, <b>gray</b> if it has the same rank in both lists.
 </p>
 <p>
-   This visualization helps to detect "<i><b>word frequency chains</b></i>", that is <b>sets of words which are
+   This visualization, inspired by <a href="http://bost.ocks.org/mike/sankey/">Sankey diagrams</a>,
+   helps to detect <b>sets of words which are
    ranked in a reverse order in the first and in the second list</b>. To find such lists, find <b>a blue link
    intersecting a red link</b>, and identify the links intersecting them whose left endpoints and right endpoints
    are sorted in symmetric orderings.
+</p>
+<p>
+   To highlight a link, please click on it to make it darker.
+   You can also click on a word to put it in italics.
+   In both cases, you can cancel by clicking again.
 </p>
 
 <span style="width: auto; font-size: 9pt;" id="label"></span>
@@ -260,8 +265,8 @@ if(isset($_POST["frequencies"])){
 
 <h2>About</h2>
 <p>
-   WFC - Word Frequency Chains, a visual tool to compare the frequency of words in two texts<br/>
-   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">Nadège Lechevrel</a>
+   CFP - Chains of Frequency Permutations, a visual tool to compare the frequency of words in two texts<br/>
+   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">NadÃ¨ge Lechevrel</a>
    &amp; <a href="http://igm.univ-mlv.fr/~gambette/">Philippe Gambette</a>.
 </p>
 <p>
@@ -277,5 +282,5 @@ if(isset($_POST["frequencies"])){
    <a href="http://www.gnu.org/licenses/">GNU General Public License</a> for more details.
 </p>
 
-<!--SoO/ei5l blg-->
+<!--blgSoO/ei5lt-->
 </body></html>

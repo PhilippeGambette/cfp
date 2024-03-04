@@ -1,20 +1,32 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-      <TITLE>Word Frequency Chains</TITLE>
+      <TITLE>CFP - Chains of Frequency Permutations</TITLE>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/united/bootstrap.min.css">
-      <link rel="icon" href="WFC.ico" />
+      <link rel="icon" href="CFP.ico" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
 </head>
 
-<body style="font-family:Calibri,Arial,sans-serif">
+<body style="font-family:Calibri,Arial,sans-serif;font-size:14pt">
 <div style="margin:20px;">
-<a href="index_fr.php"><img src="LangFrench.jpg" alt="En franÁais..." title="En franÁais..." style="float:right;margin-left:10px;"></a>
-<h1>Word Frequency Chains: comparing 2 lists of most frequent words</h1>
+<a href="index_fr.php"><img src="LangFrench.jpg" alt="En fran√ßais..." title="En fran√ßais..." style="float:right;margin-left:10px;"></a>
+<h1>CFP - Chains of Frequency Permutations: comparing 2 lists of most frequent words</h1>
 
+<p>
 Please insert below the lists of most frequent words of two texts you want to visualize. On each line, write the word first and then its number of occurrences.
 You can build such lists using the <a href="http://www.treecloud.org">Treecloud.org</a> website.
+</p>
 
-<form action="WFC.php" method="post">
+<p>
+The example below uses lists of most frequent words inside a corpus of abstracts
+of 4159 research projects about biodiversity supported by funding agencies
+from countries of the European Union, for the 2004-2007 and 2008-2011 periods.
+More details about this corpus built for the <a href="http://www.biodiversa.org/">Biodiversa
+ERA-Net project</a> can be found
+<a href="http://www.biodiversa.org/700/download">in this brochure</a>.
+</p>
+
+<form action="CFP.php" method="post">
 <br/>
 <div style="float:left;width:auto;margin:20px;padding:20px;background-color:#AAEEAA">
 Name of the first list:<br/>
@@ -60,7 +72,7 @@ role;474
 </div>
 <div style="float:left;width:auto;margin:20px;padding:20px;background-color:#EEAAAA">
 Name of the second list:<br/>
-<input type="text" name="title2" value="Years 2008-2011"><br/><br/>>
+<input type="text" name="title2" value="Years 2008-2011"><br/><br/>
 Most frequent words of the 2nd text:<br/>
 <textarea name="words2" col=10 rows=10>
 species;4025
@@ -128,10 +140,19 @@ large;662
 <br/>
 <br/>
 
+
+<h2>How to cite</h2>
+
+<p>
+If you use Chains of Frequency Permutations in a scientific article, please cite the following article:<br/>
+Nad√®ge Lechevrel, Philippe Gambette (2016) <a href="https://hal-upec-upem.archives-ouvertes.fr/hal-01408455"><b>A Textometrical Approach to Study the Transmission of Biological Knowledge in the XIX<sup>th</sup> Century</b></a>,
+<i>Nouvelles perspectives en sciences sociales</i> 12(1):221-253.
+</p>
+
 <h2>About</h2>
 <p>
-   WFC - Word Frequency Chains, a visual tool to compare the frequency of words in two texts<br/>
-   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">NadËge Lechevrel</a>
+   CFP - Chains of Frequency Permutations, a visual tool to compare the frequency of words in two texts<br/>
+   Copyright &copy; 2015-2017 - <a href="https://sites.google.com/site/nadegelechevrel/">Nad√®ge Lechevrel</a>
    &amp; <a href="http://igm.univ-mlv.fr/~gambette/">Philippe Gambette</a>.
 </p>
 <p>

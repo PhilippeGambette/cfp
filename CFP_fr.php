@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
    <HEAD>
-      <TITLE>Word Frequency Chains</TITLE>
+      <TITLE>CFP - Chaines de Formes Partagées</TITLE>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/united/bootstrap.min.css">
       <link rel="icon" href="WFC.ico" />
    </HEAD>
@@ -11,9 +11,9 @@
 
 <script type="text/javascript">
 /*
-    ******************** WFC - Word Frequency Chains ********************
+    ******************** CFP - Chaines de Formes Partagées ********************
     -> a Javascript code to compare the frequency of words in two texts
-    Copyright (C) 2015 - Philippe Gambette, Nad�ge Lechevrel
+    Copyright (C) 2015 - Philippe Gambette, Nadège Lechevrel
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -72,11 +72,11 @@ foreach ($textAr as $line) {
     $line = preg_replace('#([^;]+);([0-9]+)#', '$1 $2', $line);
     $arc = explode(" ", $line);
     if($i==0){
-       $f1.=$arc[1];
        $w1.=$arc[0];
+       $f1.=$arc[1];
     }else{
-       $f1.=','.$arc[1];
        $w1.='","'.$arc[0];
+       $f1.=','.$arc[1];
     }
     $i++;
 } 
@@ -180,7 +180,7 @@ if(isset($_POST["frequencies"])){
       //console.log("h"+(h2));
       py2.push(y2);
    }
-   
+
    // Compute the smallest and highest differences of position in 1st and 2nd list
    var minHeight=0;
    var maxHeight=0;
@@ -235,16 +235,42 @@ if(isset($_POST["frequencies"])){
 
 <body style="font-family:Calibri,sans-serif;margin:20px;">
 
-<a href="index.php"><img src="LangEnglish.jpg" alt="In English..." title="In English..." style="float:right;margin-left:10px;"></a>
-<h1>Word Frequency Chains</h1>
+<a href="index_fr.php"><img src="LangFrench.jpg" alt="En français..." title="En français..." style="float:right;margin-left:10px;"></a>
+<h1>CFP - Chaînes de Formes Partagées</h1>
 <p>
-   La visualisation ci-dessous montre les 2 listes de mots fournies.
-   Les <b>tailles des mots</b> d�pendent de leur nombre d'occurrence dans les 2 listes fournies.
-   Si le m�me mot appara�t du c�t� gauche et du c�t� droit, un <b>lien</b> est dessin� entre les deux occurrences :
-   le lien est <b>bleu</b> si le mot est mieux class� dans la seconde liste, <b>rouge</b> s'il est mieux class� dans la premi�re, <b>gris</b> s'il a le m�me classement dans les deux listes.
+   L'étude de la fréquence des mots, qui appartient au domaine de l'analyse lexicale,
+   aide notamment à repérer les “thème / rhème” des textes (appelés “discourse topics”
+   en anglais). Nous proposons un outil simple, se situant à mi-chemin entre analyse
+   lexicale et analyse stylistique,  permettant la reconnaissance de listes significatives
+   de mots fréquents pour l'analyse contrastive de deux textes,
+   appelées <i><b>Chaînes de Formes Partagées</b></i> (CFP).
 </p>
 <p>
-   Cette visualisation aide � d�tecter les "<i><b>word frequency chains</b></i>", c'est-�-dire des <b>ensembles de mots qui sont class�s dans un ordre invers� dans la premi�re et la seconde liste</b>. Pour trouver de tels ensembles, il faut trouver <b>un lien bleu qui intersecte un lien rouge</b>, et identifier les autres liens qui les intersectent, dont les extr�mit�s grauche et droite sont apparaissent selon un ordre invers�.
+   Cet outil inspiré des <a href="http://bost.ocks.org/mike/sankey/">diagrammes de Sankey</a> 
+   aide à la détection d'ensembles de mots classés dans un ordre inversé (ou pas)
+   dans deux textes différents. Lorsqu'une chaîne de mots est mise en évidence,
+   l'analyse automatique peut être étendue à l'étude de leurs collocations (ou cooccurrents)
+   pour affiner l'analyse. Le but est de traiter une CFP comme un guide
+   pour l'interprétation des textes, dans le domaine de l'analyse stylistique.
+</p>
+<p>
+   La visualisation ci-dessous les deux listes de mots fournies. Les tailles des mots
+   dépendent de leur nombre d'occurrences dans les 2 listes fournies.
+   Si le même mot apparaît du côté gauche et du côté droit,
+   un lien est dessiné entre les deux occurrences :
+   le lien est <b>bleu</b> si le mot est <b>mieux classé dans la seconde liste</b>,
+   <b>rouge</b> s'il est <b>mieux classé dans la première</b>,
+   <b>gris</b> s'il a le <b>même classement dans les deux listes</b>.
+   Cette visualisation aide à détecter les ensembles de mots qui sont classés
+   dans un ordre inversé dans la première et la seconde liste.
+   Pour trouver de tels ensembles, il faut trouver un lien bleu qui intersecte un lien rouge,
+   et identifier les autres liens qui les intersectent, dont les extrémités gauche et droite
+   apparaissent selon un ordre inversé.
+</p>
+<p>
+   Pour mettre un lien en valeur, il suffit de cliquer dessus afin de le rendre plus sombre.
+   Vous pouvez également cliquer sur un mot pour le mettre en italique.
+   Dans les deux cas, cliquer de nouveau annulera l'effet du clic précédent.
 </p>
 
 <span style="width: auto; font-size: 9pt;" id="label"></span>
@@ -255,8 +281,9 @@ if(isset($_POST["frequencies"])){
 
 <h2>&Agrave; propos</h2>
 <p>
-   WFC - Word Frequency Chains, un outil visuel pour comparer les fr�quences de mots dans deux textes<br/>
-   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">Nad�ge Lechevrel</a>
+   CFP - Chaînes de formes partagées, un outil visuel pour comparer les fréquences de mots
+   de deux textes<br/>
+   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">Nadège Lechevrel</a>
    &amp; <a href="http://igm.univ-mlv.fr/~gambette/">Philippe Gambette</a>.
 </p>
 <p>
@@ -272,5 +299,5 @@ if(isset($_POST["frequencies"])){
    <a href="http://www.gnu.org/licenses/">GNU General Public License</a> for more details.
 </p>
 
-<!--blgSoO/ei5lt-->
+<!--SoO/ei5l blg-->
 </body></html>

@@ -1,25 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-      <TITLE>Word Frequency Chains</TITLE>
+      <TITLE>CFP - ChaÃ®nes de Formes PartagÃ©es</TITLE>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/united/bootstrap.min.css">
       <link rel="icon" href="WFC.ico" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
 </head>
 
 <body style="font-family:Calibri,Arial,sans-serif">
-<div style="margin:20px;">
-<a href="index.php"><img src="LangEnglish.jpg" alt="In English..." title="In English..." style="float:right;margin-left:10px;"></a>
-<h1>Word Frequency Chains : comparaison de deux listes de mots les plus fréquents</h1>
+<div style="margin:20px;font-size:14pt">
+<a href="index.php"><img src="LangEnglish.jpg" alt="In English..." title="In English..." style="float:right;margin-left:10px;font-size:14pt"></a>
+<h1>CFP - ChaÃ®nes de Formes PartagÃ©es : comparaison de deux listes de mots les plus frÃ©quents</h1>
 
-Merci d'entrer dans les cadres ci-dessous les listes de mots les plus fréquents de deux textes, avec sur chaque ligne un mot et son nombre d'occurrences.
+Merci d'entrer dans les cadres ci-dessous les listes de mots les plus frÃ©quents de deux textes, avec sur chaque ligne un mot et son nombre d'occurrences.
 Vous pouvez construire de telles listes en utilisant le site <a href="http://www.treecloud.org">Treecloud.org</a>
 
-<form action="WFC_fr.php" method="post">
+<form action="CFP_fr.php" method="post">
 <br/>
 <div style="float:left;width:auto;margin:20px;padding:20px;background-color:#AAEEAA">
-Nom de la première liste :<br/>
-<input type="text" name="title1" value="Femmes &amp; hommes de lettres"></input><br/><br/>
-Mots les plus fréquents du texte 1 :<br/>
+Nom de la premiÃ¨re liste :<br/>
+<input type="text" name="title1" value="Laugel &amp; Vacherot"></input><br/><br/>
+Mots les plus frÃ©quents du texte 1 :<br/>
 <textarea name="words1" col=10 rows=10>
 nature;370
 science;288
@@ -27,68 +28,68 @@ vie;248
 homme;226
 philosophie;217
 monde;207
-espèces;197
-phénomènes;171
+espÃ¨ces;197
+phÃ©nomÃ¨nes;171
 principe;164
-êtres;160
+Ãªtres;160
 temps;151
 esprit;150
 lois;148
-école;144
+Ã©cole;144
 ordre;143
-matière;140
-espèce;134
+matiÃ¨re;140
+espÃ¨ce;134
 animaux;132
-théorie;130
-caractères;127
+thÃ©orie;130
+caractÃ¨res;127
 loi;127
-unité;120
-finalité;120
+unitÃ©;120
+finalitÃ©;120
 formes;118
 histoire;113
 mouvement;112
 seulement;111
-pensée;108
-méthode;108
+pensÃ©e;108
+mÃ©thode;108
 grand;106
 expliquer;105
 agassiz;100
 doctrine;100
 force;96
 forme;96
-création;96
+crÃ©ation;96
 action;95
 </textarea><br/>
 </div>
 <div style="float:left;width:auto;margin:20px;padding:20px;background-color:#EEAAAA">
 Nom de la seconde liste :<br/>
-<input type="text" name="title2" value="Scientifiques"><br/><br/>
-Mots les plus fréquents du texte 2 :<br/>
+<input type="text" name="title2" value="Bernard &amp; Martins"><br/><br/>
+Mots les plus frÃ©quents du texte 2 :<br/>
 <textarea name="words2" col=10 rows=10>
-phénomènes;324
+phÃ©nomÃ¨nes;324
 corps;268
 vie;244
 animaux;222
-cœur;196
+cÅ“ur;196
 science;163
 nature;161
 homme;144
 animal;143
-espèces;137
-propriétés;137
+espÃ¨ces;137
+propriÃ©tÃ©s;137
 plantes;134
 sciences;131
 sang;128
 organes;122
-végétaux;120
+vÃ©gÃ©taux;120
 cerveau;112
-êtres;109
+Ãªtres;109
 physiologie;108
 glacier;104
 curare;100
 conditions;100
 eau;97
-élémens;96
+Ã©lÃ©mens;96
 influence;95
 seulement;95
 effet;95
@@ -107,7 +108,7 @@ milieu;83
 <br>
 <input type="submit" value="Envoyer">
 <br/>
-<INPUT type="checkbox" name="frequencies" value="Display frequencies" checked>Afficher les fréquences
+<INPUT type="checkbox" name="frequencies" value="Display frequencies" checked>Afficher les frÃ©quences
 </form>
 
 <br/>
@@ -130,11 +131,19 @@ milieu;83
 <br/>
 <br/>
 
+<h2>Citation</h2>
+
+<p>
+Si vous utilisez les chaÃ®nes de formes partagÃ©es dans un article,
+merci de citer l'article suivant :<br/>
+NadÃ¨ge Lechevrel, Philippe Gambette (2016) <a href="https://hal-upec-upem.archives-ouvertes.fr/hal-01408455"><b>Une approche textomÃ©trique pour Ã©tudier la transmission des savoirs biologiques au XIX<sup>e</sup> siÃ¨cle</b></a>,
+<i>Nouvelles perspectives en sciences sociales</i> 12(1):221-253.
+</p>
 
 <h2>&Agrave; propos</h2>
 <p>
-   WFC - Word Frequency Chains, un outil visuel pour comparer les fréquences de mots dans deux textes<br/>
-   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">Nadège Lechevrel</a>
+   CFP - ChaÃ®nes de Formes PartagÃ©es, un outil visuel pour comparer les frÃ©quences de mots dans deux textes<br/>
+   Copyright &copy; 2015-2017 - <a href="https://sites.google.com/site/nadegelechevrel/">NadÃ¨ge Lechevrel</a>
    &amp; <a href="http://igm.univ-mlv.fr/~gambette/">Philippe Gambette</a>.
 </p>
 <p>
