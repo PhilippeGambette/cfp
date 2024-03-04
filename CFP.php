@@ -5,6 +5,7 @@
       <TITLE>CFP - Chains of Frequency Permutations</TITLE>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/united/bootstrap.min.css">
       <link rel="icon" href="WFC.ico" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
    </HEAD>
 
 <SCRIPT TYPE="text/javascript" SRC="jquery-1.11.2.min.js"></script>
@@ -13,7 +14,7 @@
 /*
     ******************** CFP - Chains of Frequency Permutations ********************
     -> a Javascript code to compare the frequency of words in two texts
-    Copyright (C) 2015 - Philippe Gambette, Nadège Lechevrel
+    Copyright (C) 2015-2017 - Philippe Gambette, Nadège Lechevrel
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,15 +69,20 @@ $text = trim($words1);
 $textAr = explode("\n", $text);
 $textAr = str_replace("\r","",$textAr);
 $i=0;
+$arrWF=array();
 foreach ($textAr as $line) {    
     $line = preg_replace('#([^;]+);([0-9]+)#', '$1 $2', $line);
     $arc = explode(" ", $line);
+    $arrWF[$arc[0]]=$arc[1];
+} 
+arsort($arrWF);
+foreach ($arrWF as $key => $val) {
     if($i==0){
-       $f1.=$arc[1];
-       $w1.=$arc[0];
+       $f1.=$val;
+       $w1.=$key;
     }else{
-       $f1.=','.$arc[1];
-       $w1.='","'.$arc[0];
+       $f1.=','.$val;
+       $w1.='","'.$key;
     }
     $i++;
 } 
@@ -233,9 +239,9 @@ if(isset($_POST["frequencies"])){
 });
 </script>
 
-<body style="font-family:Calibri,sans-serif;margin:20px;">
+<body style="font-family:Calibri,sans-serif;margin:20px;font-size:14pt">
 
-<a href="index.php"><img src="LangEnglish.jpg" alt="In English..." title="In English..." style="float:right;margin-left:10px;"></a>
+<a href="index_fr.php"><img src="LangFrench.jpg" alt="En français..." title="En français..." style="float:right;margin-left:10px;"></a>
 <h1>CFP - Chains of Frequency Permutations</h1>
 <p>
    The visualization below displays the 2 lists of words you have given as input.
@@ -266,7 +272,7 @@ if(isset($_POST["frequencies"])){
 <h2>About</h2>
 <p>
    CFP - Chains of Frequency Permutations, a visual tool to compare the frequency of words in two texts<br/>
-   Copyright &copy; 2015 - <a href="https://sites.google.com/site/nadegelechevrel/">Nadège Lechevrel</a>
+   Copyright &copy; 2015-2017 - <a href="https://sites.google.com/site/nadegelechevrel/">Nadège Lechevrel</a>
    &amp; <a href="http://igm.univ-mlv.fr/~gambette/">Philippe Gambette</a>.
 </p>
 <p>
