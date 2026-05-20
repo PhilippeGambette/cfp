@@ -1,7 +1,7 @@
 # cfp
 Chains of Frequency Permutations: comparing 2 lists of most frequent words
 
-Website available at [https://treecloud.univ-mlv.fr/cfp/](https://treecloud.univ-eiffel.fr/cfp/)
+Website available at [https://treecloud.univ-eiffel.fr/cfp/](https://treecloud.univ-eiffel.fr/cfp/)
 
 If you use this tool, please cite:
 Nadège Lechevrel, Philippe Gambette (2016) [Une approche textométrique pour étudier la transmission des savoirs biologiques au XIXe siècle](https://doi.org/10.7202/1038375ar) (A Textometrical Approach to Study the Transmission of Biological Knowledge in the XIXth Century), *Nouvelles perspectives en sciences sociales* 12(1):221-253, https://doi.org/10.7202/1038375ar.
